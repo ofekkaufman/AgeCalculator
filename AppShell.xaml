@@ -4,11 +4,17 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AgeCalculator.Views"
-    Title="AgeCalculator">
+    Title="AgeCalculator"
+    Flyout>
+    
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:FirstPage}"
         Route="FirstPage" />
 
+    <ShellContent
+        Title="slider"
+        ContentTemplate="{DataTemplate local:SecondPage}"
+        Route="SecondPage" />
 </Shell>

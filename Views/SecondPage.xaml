@@ -3,10 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AgeCalculator.Views.SecondPage"
              Title="SecondPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <!--- replace field with slider, calculate age in ten years and display the amount of candles-->
+    <!-- age slider -->
+    <Grid Padding="20" RowDefinitions="*, Auto" >
+        <ScrollView>
+            <Grid RowDefinitions="auto,auto">
+                <Label x:Name="ResultLabel" Grid.Row="0" Grid.Column="0" FontSize="Large" VerticalOptions="Start"/>
+                <StackLayout Grid.Row="1" x:Name="LayoutFields" Spacing="8" HorizontalOptions="CenterAndExpand" />
+            </Grid>
+        </ScrollView>
+        <Grid Grid.Row="1" RowDefinitions="*, *, *" ColumnDefinitions="*,*" VerticalOptions="End">
+            <!-- add a label which shows the age selected-->
+            <Label x:Name="AgeLabel" Grid.Row="0" Grid.Column="1" FontSize="Large"/>
+            <Slider x:Name="AgeSlider" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Minimum="0" Maximum="100" ValueChanged="OnSliderValueChanged"/>
+        </Grid>
+    </Grid>
 </ContentPage>

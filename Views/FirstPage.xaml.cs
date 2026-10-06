@@ -37,7 +37,7 @@ namespace AgeCalculator.Views
                     currentRow = new HorizontalStackLayout { Spacing = 4, HorizontalOptions = LayoutOptions.FillAndExpand };
                     LayoutFields.Children.Add(currentRow);
                 }
-
+                 
                 currentRow?.Children.Add(new Image
                 {
                     Source = "candle.png",
